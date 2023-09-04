@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extension Options</title>
+    <script src="options.js"></script>
+  </head>
+  <body>
+    <h1>Extension Options</h1>
+    <p>Similarity Algorithm</p>
+    <select id="method">
+      <option value="cosine" selected="selected">Cosine Similarity</option>
+      <option value="jaccard">Jaccard Similarity</option>
+      <option value="gnn">Graph Neural Network</option>
+    </select>
+    <p>Number of Recommendations to show:</p>
+    <select id="recommendNo">
+      <option value="5" selected="selected">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+      <option value="25">25</option>
+      <option value="30">30</option>
+    </select>
+  </body>
+  <p>Sort By:</p>
+  <select id="sortBy">
+    <option value="none" selected="selected">None</option>
+    <option value="downloads-desc">Downloads (Descending)</option>
+    <option value="downloads-asc">Downloads (Ascending)</option>
+  </select>
+</body>  
+</html>

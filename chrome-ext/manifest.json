@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "HFMRS",
+  "version": "1.0.0",
+  "description": "Recommend similar models on HuggingFace",
+  "icons": {
+    "48": "images/hfmrs-48.png",
+    "128": "images/hfmrs-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://huggingface.co/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/hfmrs-18.svg"],
+      "matches": ["https://huggingface.co/*"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage"]
+}

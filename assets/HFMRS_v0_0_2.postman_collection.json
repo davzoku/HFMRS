@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "7d0b26e3-2a4d-42a2-8544-a75d019b3785",
+		"name": "HFMRS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17696033"
+	},
+	"item": [
+		{
+			"name": "recommend",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/recommend?model_id=bert-base-uncased",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recommend"
+					],
+					"query": [
+						{
+							"key": "model_id",
+							"value": "bert-base-uncased"
+						},
+						{
+							"key": "method",
+							"value": "cosine",
+							"description": "optional",
+							"disabled": true
+						},
+						{
+							"key": "recommend_no",
+							"value": "10",
+							"description": "optional",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "recommend(custom method, recommend_no",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/recommend?model_id=bert-base-uncased&method=cosine&recommend_no=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"recommend"
+							],
+							"query": [
+								{
+									"key": "model_id",
+									"value": "bert-base-uncased"
+								},
+								{
+									"key": "method",
+									"value": "cosine",
+									"description": "optional"
+								},
+								{
+									"key": "recommend_no",
+									"value": "10",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 15 Apr 2023 07:05:43 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "635"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model_id\": \"bert-base-cased\",\n        \"score\": 0.9890707100936805\n    },\n    {\n        \"model_id\": \"bert-large-uncased\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-uncased-whole-word-masking\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-cased\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-cased-whole-word-masking\",\n        \"score\": 0.9668415633885687\n    },\n    {\n        \"model_id\": \"distilbert-base-uncased\",\n        \"score\": 0.8478260869565215\n    },\n    {\n        \"model_id\": \"albert-base-v2\",\n        \"score\": 0.8352152663013301\n    },\n    {\n        \"model_id\": \"albert-base-v1\",\n        \"score\": 0.8224253152776162\n    },\n    {\n        \"model_id\": \"albert-xxlarge-v2\",\n        \"score\": 0.8224253152776162\n    },\n    {\n        \"model_id\": \"albert-large-v2\",\n        \"score\": 0.8094487507439181\n    }\n]"
+				},
+				{
+					"name": "recommend(Default)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/recommend?model_id=bert-base-uncased",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"recommend"
+							],
+							"query": [
+								{
+									"key": "model_id",
+									"value": "bert-base-uncased"
+								},
+								{
+									"key": "method",
+									"value": "cosine",
+									"description": "optional",
+									"disabled": true
+								},
+								{
+									"key": "recommend_no",
+									"value": "10",
+									"description": "optional",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 15 Apr 2023 07:05:53 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "337"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model_id\": \"bert-base-cased\",\n        \"score\": 0.9890707100936805\n    },\n    {\n        \"model_id\": \"bert-large-uncased\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-uncased-whole-word-masking\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-cased\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-cased-whole-word-masking\",\n        \"score\": 0.9668415633885687\n    }\n]"
+				},
+				{
+					"name": "recommend (sort-by-downloads-asc)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/recommend?model_id=bert-base-uncased&method=cosine&recommend_no=10&sort_by=downloads-asc",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"recommend"
+							],
+							"query": [
+								{
+									"key": "model_id",
+									"value": "bert-base-uncased"
+								},
+								{
+									"key": "method",
+									"value": "cosine",
+									"description": "optional"
+								},
+								{
+									"key": "recommend_no",
+									"value": "10",
+									"description": "optional"
+								},
+								{
+									"key": "sort_by",
+									"value": "downloads-asc"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 17 Apr 2023 02:38:21 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "633"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model_id\": \"bert-large-cased-whole-word-masking\",\n        \"score\": 0.9668415633885687\n    },\n    {\n        \"model_id\": \"albert-large-v2\",\n        \"score\": 0.8094487507439181\n    },\n    {\n        \"model_id\": \"albert-xxlarge-v2\",\n        \"score\": 0.8224253152776162\n    },\n    {\n        \"model_id\": \"albert-base-v1\",\n        \"score\": 0.8224253152776162\n    },\n    {\n        \"model_id\": \"bert-large-cased\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-uncased-whole-word-masking\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"bert-large-uncased\",\n        \"score\": 0.9780192938436517\n    },\n    {\n        \"model_id\": \"albert-base-v2\",\n        \"score\": 0.83521526630133\n    },\n    {\n        \"model_id\": \"bert-base-cased\",\n        \"score\": 0.9890707100936804\n    },\n    {\n        \"model_id\": \"distilbert-base-uncased\",\n        \"score\": 0.8478260869565217\n    }\n]"
+				}
+			]
+		}
+	]
+}
